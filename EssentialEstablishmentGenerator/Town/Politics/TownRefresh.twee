@@ -1,5 +1,5 @@
-:: TownRefresh [render]
-
+:: TownRefresh
+/*
 <<switch $town.economicIdeologyIST>>
     <<case "feudalist">>
         <<set $town.economicIdeology to "feudalism">>
@@ -27,8 +27,8 @@
         <<set $town.economicIdeologyIST to "primitivist">>
         <<set $town.economicIdeologyDescription to "The people of $town.name work the land in a loosely organised sense; there is no concept of ownership, and the majority of the $town.type's citizens are hunter-gatherers.">>
 <</switch>>
-
-
+ */
+/*
 <<switch $town.politicalIdeologyIC>>
 		<<case "autocratic">>
       <<set $town.leaderType to "the supreme leader">>
@@ -81,7 +81,7 @@
                   <<set $town.leaderType to "the supreme leader">>
                   <<set $townLeader.title to "Lord", $townLeader.background to "noble">>
         <</switch>>
-            <<switch $town.politicalSource>> /* This bit stops you from having an autocratic anarchy */
+            <<switch $town.politicalSource>>
                 <<case "republic", "anarchy">>
                     <<set $town.politicalSource to "absolute monarchy">>
             <</switch>>
@@ -133,7 +133,84 @@
         <<set $town.leaderType to "the engineers">>
         <<set $town.politicalIdeologyIC to "technocratic">>
         <<set $townLeader.title to "Architect">>
-	<</switch>>
+	<</switch>> */
+/*
+
+<<switch $town.politicalIdeologyIC>>
+		<<case "autocratic">>
+        <<switch $town.politicalSource>>
+            <<case "absolute monarchy">>
+                <<if ndef $townRuler>>
+                          <<set $townRuler to setup.createNPC({title: "$townRuler.hisher Royal Highness", background: "noble"})>>
+                  <<else>>
+                          <<set $townRuler.title to "$townRuler.hisher Royal Highness", $townRuler.background to "noble">>
+                <</if>>
+                      <<switch $townRuler.gender>>
+                          <<case "man">>
+                            <<set $town.rulerType to "King">>
+                          <<case "woman">>
+                            <<set $town.rulerType to "Queen">>
+                          <<default>>
+                            <<set $town.rulerType to "the supreme leader">>
+                        <</switch>>
+                <<set $townLeader.title to "$townLeader.hisher Royal Highness", $townLeader.background to "noble">>
+                  <<switch $townLeader.gender>>
+                      <<case "man">>
+                        <<set $town.leaderType to "King">>
+                      <<case "woman">>
+                        <<set $town.leaderType to "Queen">>
+                      <<default>>
+                        <<set $town.leaderType to "the supreme leader">>
+                    <</switch>>
+            <<case "constitutional monarchy">>
+              <<switch $townRuler.gender>>
+                  <<case "man">>
+                      <<set $town.rulerType to "King">>
+                  <<case "woman">>
+                      <<set $town.rulerType to "Queen">>
+                  <<default>>
+                      <<set $town.rulerType to "the supreme leader">>
+                <</switch>>
+                <<if ndef $townRuler>>
+                    <<set $townRuler to setup.createNPC({title: "$townRuler.hisher Royal Highness", background: "noble"})>>
+                  <<else>>
+                    <<set $townRuler.title to "$townRuler.hisher Royal Highness", $townRuler.background to "noble">>
+                <</if>>
+                <<if ndef $townLeader>>
+                    <<set $townLeader to setup.createNPC({title: "Lord", background: "noble"})>>
+                  <<else>>
+                    <<set $townLeader.title to "Lord", $townLeader.background to "noble">>
+                <</if>>
+            <<default>>
+                  <<set $town.leaderType to "the supreme leader">>
+                  <<set $townLeader.title to "Lord", $townLeader.background to "noble">>
+        <</switch>>
+            <<switch $town.politicalSource>>
+                <<case "republic", "anarchy">>
+                    <<set $town.politicalSource to "absolute monarchy">>
+            <</switch>>
+		<<case "meritocratic">>
+        <<set $townLeader.title to "Lord", $townLeader.background to "noble">>
+		<<case "democratic">>
+        <<set $townLeader.title to "Lord", $townLeader.background to "commoner">>
+		<<case "kleptocratic">>
+        <<set $townLeader.title to "High Thief", $townLeader.dndclass to "rogue", $townLeader.background to "criminal">>
+		<<case "magocratic">>
+        <<set $townLeader.title to "Archwizard", $townLeader.dndclass to "wizard", $townLeader.background to "sage">>
+		<<case "militocratic">>
+        <<set $townLeader.title to "Commander", $townLeader.dndclass to "fighter", $townLeader.background to "soldier">>
+		<<case "oligarchy">>
+        <<set $townLeader.title to "Lord", $townLeader.background to "noble">>
+		<<case "pedocratic">>
+        <<set $townLeader.title to "Sir", $townLeader.background to "scholar">>
+		<<case "theocratic">>
+        <<if $townLeader.gender != "man">>
+          <<set $townLeader to setup.createNPC({title: "Father", gender: "man", dndclass: "cleric", background: "acolyte"})>>
+        <</if>>
+        <<set $townLeader.title to "Father", $townLeader.gender to "man", $townLeader.dndclass to "cleric", $townLeader.background to "acolyte">>
+		<<case "technocratic">>
+        <<set $townLeader.title to "Architect">>
+	<</switch>> */
 
 <<switch $town.politicalIdeologyIC>>
   <<case "pedocratic">>
@@ -172,12 +249,12 @@
     <</if>>
 <</switch>>
 
-<<switch $town.politicalIdeologyIC>>
+/* <<switch $town.politicalIdeologyIC>>
   <<case "pedocratic", "kleptocratic", "theocratic", "magocratic", "technocratic">>
     <<set $town.leaderType to "<<link '$townPoliticalFaction.name'>><<set $currentFaction to $townPoliticalFaction>><<goto 'FactionProfile'>><</link>>">>
-<</switch>>
+<</switch>> */
 
-
+/*
 <<switch $town.politicalSource>>
 		<<case "republic">>
         <<set $town.politicalSourceDescription to "Affairs are handled by $town.leaderType, the head of whom is $townLeader.title <<profile $townLeader>>">>
@@ -199,4 +276,4 @@
             <</switch>>
     <<default>>
         <<set $town.politicalSourceDescription to "Affairs are handled by $town.leaderType, the head of whom is $townLeader.title <<profile $townLeader>>.">>
-<</switch>>
+<</switch>> */

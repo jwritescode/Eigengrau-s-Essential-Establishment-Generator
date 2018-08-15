@@ -72,8 +72,8 @@
 <<include "Books">>
 
 <<include "TavernGames">>
-
-<<include "TownSocioPolitics">>
+/*
+<<include "TownSocioPolitics">> */
 
 <<include "TownRefresh">>
 

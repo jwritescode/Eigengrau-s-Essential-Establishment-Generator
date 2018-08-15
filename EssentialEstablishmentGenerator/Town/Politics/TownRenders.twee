@@ -1,5 +1,5 @@
-:: TownRenders [render]
-
+:: TownRenders 
+/*
 <<set _guardfundingRoll to 0>>
 
 <<if $town.population gt 3000>>
@@ -210,9 +210,11 @@
         <<elseif $town.arcanaRoll lte 10>>
           <<set $town.arcana to "Magic is outlawed, and guards look for any excuse to put away anyone that looks like a magic user. It is coded into law as a tightly restricted activity.">>
       <</if>>
-<</switch>>
+<</switch>> */
 
-<<if _guardfundingRoll gt 90>>
+<<run setup.townRender($town)>>
+
+/* <<if _guardfundingRoll gt 90>>
     <<set $guard.funding to "The guards are extremely well funded, and are extensively armed. They regularly have training exercises, and their officers are held to extremely high standards.">>
   <<elseif _guardfundingRoll gt 80>>
     <<set $guard.funding to "The guards are well funded, and are armed more than adequately. They regularly have training exercises, and their officers are held to high standards.">>
@@ -230,14 +232,14 @@
     <<set $guard.funding to "The guard is quite underfunded, and their equipment is always in disrepair. Their officers are held accountable for their actions only when public pressure calls for it, though $guard.name does not have the funding to perform any training exercises.">>
   <<elseif _guardfundingRoll lte 20>>
     <<set $guard.funding to "The guard is severely underfunded, and their equipment is always in disrepair. Their officers are held accountable for their actions only when $town.rulerType calls for it, though $guard.name does not have the funding to train their recruits, resulting in bullies being commonplace.">>
-<</if>>
+<</if>> */
 
-<<set $town.wealthRoll to $town.wealthRoll.clamp(1, 100)>>
+/* <<set $town.wealthRoll to $town.wealthRoll.clamp(1, 100)>>
 <<set $town.economicsRoll to $town.economicsRoll.clamp(1, 100)>>
 <<set $town.militaryRoll to $town.militaryRoll.clamp(1, 100)>>
 <<set $town.lawRoll to $town.lawRoll.clamp(1, 100)>>
 <<set $town.arcanaRoll to $town.arcanaRoll.clamp(1, 100)>>
-<<set $town.welfareRoll to $town.welfareRoll.clamp(1, 100)>>
+<<set $town.welfareRoll to $town.welfareRoll.clamp(1, 100)>> */
 
   <<if $town.sinRoll gt 75 && $town.population gt 300>>
   			<<set $town.hasBrothel to true>>

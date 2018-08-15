@@ -1,5 +1,5 @@
 :: TownSocioPolitics
-
+/* 
 <<switch $town.type>>
     <<case "hamlet">>
         <<set $town.economicIdeology to either(["feudalism", "feudalism", "feudalism", "feudalism", "capitalism", "syndicalism", "communism", "primitivism", "primitivism"])>>
@@ -81,7 +81,7 @@
         <<set $town.politicalIdeology to either(["autocracy", "autocracy", "autocracy", "meritocracy", "democracy", "kleptocracy", "magocracy", "militocracy", "oligarchy", "pedocracy", "theocracy", "technocracy"])>>
     <<default>>
 				<<set $town.politicalIdeology to either(["autocracy", "autocracy", "autocracy", "meritocracy", "democracy", "kleptocracy", "magocracy", "militocracy", "oligarchy", "pedocracy", "theocracy", "technocracy"])>>
-<</switch>>
+<</switch>> */
 
 
 /* <<switch $town.politicalIdeology>>
@@ -206,7 +206,7 @@
         <<set $town.politicalIdeologyIC to "technocratic">>
 	<</switch>>
 
-
+/*
   <<switch $town.politicalSource>>
   		<<case "republic">>
           <<set $town.politicalSourceDescription to "Affairs are handled by $town.leaderType, the head of whom is $townLeader.title <<profile $townLeader>>">>
@@ -228,4 +228,4 @@
               <</switch>>
       <<default>>
           <<set $town.politicalSourceDescription to "Affairs are handled by $town.leaderType, the head of whom is $townLeader.title <<profile $townLeader>>.">>
-  <</switch>>
+  <</switch>> */

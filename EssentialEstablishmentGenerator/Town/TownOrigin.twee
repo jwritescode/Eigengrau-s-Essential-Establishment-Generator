@@ -1,5 +1,5 @@
 :: TownOrigin
-<<switch $town.terrain>>
+/* <<switch $town.terrain>>
 <<case "temperate">>
   <<switch $town.location>>
       <<case "seacoast">>
@@ -335,4 +335,4 @@
           "a water source and a well-traveled road"])>>
           <<set $town.vegetation to either(["sparse", "lush", "thick"])>>
     <</switch>>
-<</switch>>
+<</switch>> */

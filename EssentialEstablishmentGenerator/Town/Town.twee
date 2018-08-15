@@ -1,6 +1,10 @@
 :: Town
+<<set $townLeader to {}>>
+<<set $town to {}>>
+<<set $town to setup.createTown()>>
+<<set $town.name to setup.createTownName()>>
 
-<<set $town to {
+/* <<set $town to {
 	wealthRoll: random(1, 100),
 	reputationRoll: random(1, 100),
 	sinRoll: random(1, 100),
@@ -14,7 +18,7 @@
 	arcanaRoll: random(1, 100),
 }>>
 
-<<set $townLeader to {}>>
+
 
 <<set $town.wealthRoll to $town.wealthRoll.clamp(1, 100),
 $town.reputationRoll to $town.reputationRoll.clamp(1, 100),
@@ -22,13 +26,13 @@ $town.sinRoll to $town.sinRoll.clamp(1, 100),
 $town.diversityRoll to $town.diversityRoll.clamp(1, 100),
 $town.magicRoll to $town.magicRoll.clamp(1, 100),
 $town.sizeRoll to $town.sizeRoll.clamp(1, 100)>>
+ */
 
-<<set $town.name to setup.createTown()>>
 <<set $town.passageName to "TownOutput">>
 <<set $merchantGuild to setup.createFaction({type: "merchants"})>>
 
-/* Town Population Roller */
-<<set _townPopulationRoll to random(1, 10)>>
+
+/* <<set _townPopulationRoll to random(1, 10)>>
 	<<if _townPopulationRoll gt 8>>
 		<<set $town.population to random(3001, 6000), $town.type to "city", $town.wealthRoll += 5, $town.reputationRoll += 5, $town.sinRoll += 15, $town.diversityRoll += 10>>
 	<<elseif _townPopulationRoll gt 5>>
@@ -37,10 +41,10 @@ $town.sizeRoll to $town.sizeRoll.clamp(1, 100)>>
 		<<set $town.population to random(301, 1000), $town.type to "village", $town.wealthRoll += 2, $town.reputationRoll -= 2, $town.sinRoll -= 3, $town.diversityRoll -= 4>>
 	<<elseif _townPopulationRoll lte 2>>
 		<<set $town.population to random(30, 300), $town.type to "hamlet", $town.wealthRoll -= 2, $town.reputationRoll -= 12, $town.sinRoll -= 15, $town.diversityRoll -= 12>>
-	<</if>>
+	<</if>> */
 
-/* Town Location Roller */
-<<set _townpotentiallocation to ["seacoast", "forest", "hills", "plains", "mountains", "river coast", "seacoast", "forest", "hills", "plains", "mountains", "river coast", "jungle", "volcanic field", "seacoast", "forest", "hills", "plains", "mountains", "river coast", "tundra", "ice sheet", "seacoast", "desert", "hills", "plains", "mountains", "river coast", "wasteland", "oasis"]>>
+
+/* <<set _townpotentiallocation to ["seacoast", "forest", "hills", "plains", "mountains", "river coast", "seacoast", "forest", "hills", "plains", "mountains", "river coast", "jungle", "volcanic field", "seacoast", "forest", "hills", "plains", "mountains", "river coast", "tundra", "ice sheet", "seacoast", "desert", "hills", "plains", "mountains", "river coast", "wasteland", "oasis"]>>
 <<set _terrainRoll to random(1, 6)>>
 <<set $town.terrainPool to ["temperate", "tropical", "polar", "arid"]>>
 <<set $town.locationPool to ["seacoast", "volcanic field", "ice sheet", "river coast", "forest", "plains", "jungle", "tundra", "desert", "wasteland", "hills", "mountains"]>>
@@ -53,7 +57,7 @@ $town.sizeRoll to $town.sizeRoll.clamp(1, 100)>>
 		 <<set $town.terrain to "polar", $town.location to _townpotentiallocation[random(14, 21)]>>
 	 <<elseif _terrainRoll is 6>>
 		 <<set $town.terrain to "arid", $town.location to _townpotentiallocation[random(22, 29)]>>
-<</if>>
+<</if>> */
 
 <<set $weather to {
 	season: either(["winter", "spring", "summer", "autumn"]),
@@ -62,7 +66,7 @@ $town.sizeRoll to $town.sizeRoll.clamp(1, 100)>>
 
 
 
-
+/*
 <<set $town.scenery to either(["Children play in the street, calling after one another.", "An old woman waves from her chair on the porch at you.", "A young girl waves at you, before being shooed into her home by a doting mother.", "The stench of curing leathers fills your nose as you pass the local tannery.", "You see a kite flying overhead, and follow the string down to a young boy, clearly enjoying himself."])>>
 <<set $town.currentEvent to either([
 			"an anniversary of a monarch's reign",
@@ -157,7 +161,7 @@ $town.sizeRoll to $town.sizeRoll.clamp(1, 100)>>
 			"carrots and cucumbers",
 			"leeks",
 			"corn",
-			"fish"])>>
+			"fish"])>> */
 
 
 
