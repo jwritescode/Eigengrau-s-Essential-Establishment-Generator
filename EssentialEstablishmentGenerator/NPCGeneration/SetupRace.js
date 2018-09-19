@@ -159,53 +159,55 @@ setup.createRace = function (npc) {
   Object.assign(npc, {
     heightRoll: baseHeight + heightModifier,
     weightRoll: baseWeight + (heightModifier * weightModifier)
+    muscleMass: muscleMass + dice(5, 4) - 12
   })
 
-  // bmiReadout will eventually replace 'weight'. So, when all that stuff is done, plus athleticism is coded in, I'll do a big ol' Cmd + F on 'bmiReadout' and replace it. For now, it's just bug-testing.
   npc.bmi = (Math.trunc((npc.weightRoll / (npc.heightRoll * npc.heightRoll)) * 703))
-  if (npc.bmi > 40) {
-    npc.weight = 'morbidly obese'
-  } else if (npc.bmi >= 35) {
-    npc.weight = 'extremely obese'
-  } else if (npc.bmi >= 28) {
-    npc.weight = 'beer-bellied'
-  } else if (npc.bmi >= 32) {
-    npc.weight = 'round'
-  } else if (npc.bmi >= 30) {
-    npc.weight = 'obese'
-  } else if (npc.bmi >= 29) {
-    npc.weight = 'chubby'
-  } else if (npc.bmi >= 28) {
-    npc.weight = 'fat'
-  } else if (npc.bmi >= 27) {
-    npc.weight = 'overweight'
-  } else if (npc.bmi >= 26) {
-    npc.weight = 'thick'
-  } else if (npc.bmi >= 25) {
-    npc.weight = 'chunky'
-  } else if (npc.bmi >= 24) {
-    npc.weight = 'broad'
-  } else if (npc.bmi >= 23) {
-    npc.weight = 'healthy'
-  } else if (npc.bmi >= 22) {
-    npc.weight = 'lean'
-  } else if (npc.bmi >= 21) {
-    npc.weight = 'thin'
-  } else if (npc.bmi >= 20) {
-    npc.weight = 'rather thin'
-  } else if (npc.bmi >= 19) {
-    npc.weight = 'skinny'
-  } else if (npc.bmi >= 18) {
-    npc.weight = 'lithe'
-  } else if (npc.bmi >= 17) {
-    npc.weight = 'scrawny'
-  } else if (npc.bmi >= 16) {
-    npc.weight = 'weedy'
-  } else if (npc.bmi >= 15) {
-    npc.weight = 'gaunt'
-  } else if (npc.bmi < 15) {
-    npc.weight = 'bony'
-  }
+
+  npc.weight = setup.closestMatch(setup.bmiDescriptions, bmi, muscleMass, npc.bmi, npc.muscleMass)
+  // if (npc.bmi > 40) {
+  //   npc.weight = 'morbidly obese'
+  // } else if (npc.bmi >= 35) {
+  //   npc.weight = 'extremely obese'
+  // } else if (npc.bmi >= 28) {
+  //   npc.weight = 'beer-bellied'
+  // } else if (npc.bmi >= 32) {
+  //   npc.weight = 'round'
+  // } else if (npc.bmi >= 30) {
+  //   npc.weight = 'obese'
+  // } else if (npc.bmi >= 29) {
+  //   npc.weight = 'chubby'
+  // } else if (npc.bmi >= 28) {
+  //   npc.weight = 'fat'
+  // } else if (npc.bmi >= 27) {
+  //   npc.weight = 'overweight'
+  // } else if (npc.bmi >= 26) {
+  //   npc.weight = 'thick'
+  // } else if (npc.bmi >= 25) {
+  //   npc.weight = 'chunky'
+  // } else if (npc.bmi >= 24) {
+  //   npc.weight = 'broad'
+  // } else if (npc.bmi >= 23) {
+  //   npc.weight = 'healthy'
+  // } else if (npc.bmi >= 22) {
+  //   npc.weight = 'lean'
+  // } else if (npc.bmi >= 21) {
+  //   npc.weight = 'thin'
+  // } else if (npc.bmi >= 20) {
+  //   npc.weight = 'rather thin'
+  // } else if (npc.bmi >= 19) {
+  //   npc.weight = 'skinny'
+  // } else if (npc.bmi >= 18) {
+  //   npc.weight = 'lithe'
+  // } else if (npc.bmi >= 17) {
+  //   npc.weight = 'scrawny'
+  // } else if (npc.bmi >= 16) {
+  //   npc.weight = 'weedy'
+  // } else if (npc.bmi >= 15) {
+  //   npc.weight = 'gaunt'
+  // } else if (npc.bmi < 15) {
+  //   npc.weight = 'bony'
+  // }
 
   if (npc.heightRoll > 78) {
     npc.height = 'giraffe-like'
@@ -285,7 +287,7 @@ setup.createRace = function (npc) {
 
   switch (npc.race) {
     case 'human':
-      npc.racenote = npc.height + ' ' + npc.gender
+      npc.raceNote = npc.height + ' ' + npc.gender
       if (npc.gender === 'man') {
         npc.racesingular = 'man'
         if (npc.beardRoll >= 27) {
@@ -296,7 +298,7 @@ setup.createRace = function (npc) {
       }
       break
     case 'elf':
-      npc.racenote = npc.race
+      npc.raceNote = npc.race
       if (npc.gender === 'man') {
         if (npc.beardRoll >= 87) {
           npc.beard = ['scraggly beard', 'long, flowing beard', 'five o clock shadow', 'neckbeard', 'well-groomed moustache', 'goatee', 'well-loved beard, with ornamental beads woven into it', 'sideburns', 'smattering of hairs on his face', 'bit of peach fuzz on his chin', 'long, luxurious beard', 'long, well-kempt beard', 'rather wild, unkempt beard', 'dreadful beard'].random()
@@ -304,7 +306,7 @@ setup.createRace = function (npc) {
       }
       break
     case 'dwarf':
-      npc.racenote = npc.race
+      npc.raceNote = npc.race
       if (npc.gender === 'man') {
         if (npc.beardRoll >= 2) {
           npc.beard = ['scraggly beard', 'long, flowing beard', 'well-groomed beard going down to his chest', 'goatee', 'goatee that seems to be trying to level up into a beard', 'well-loved beard, with ornamental beads woven into it', 'sideburns', 'long, luxurious beard', 'long, well-kempt beard', 'rather wild, unkempt beard', 'dreadful beard'].random()
@@ -312,7 +314,7 @@ setup.createRace = function (npc) {
       }
       break
     case 'halfling':
-      npc.racenote = npc.race
+      npc.raceNote = npc.race
       if (npc.gender === 'man') {
         if (npc.beardRoll >= 92) {
           npc.beard = ['scraggly beard', 'long, flowing beard', 'five o clock shadow', 'neckbeard', 'well-groomed moustache', 'goatee', 'well-loved beard, with ornamental beads woven into it', 'sideburns', 'smattering of hairs on his face', 'bit of peach fuzz on his chin', 'long, luxurious beard', 'long, well-kempt beard', 'rather wild, unkempt beard', 'dreadful beard'].random()
@@ -320,7 +322,7 @@ setup.createRace = function (npc) {
       }
       break
     case 'half-orc':
-      npc.racenote = npc.race
+      npc.raceNote = npc.race
       if (npc.gender === 'man') {
         if (npc.beardRoll >= 75) {
           npc.beard = ['scraggly beard', 'long, flowing beard', 'five o clock shadow', 'neckbeard', 'well-groomed moustache', 'goatee', 'well-loved beard, with ornamental beads woven into it', 'sideburns', 'smattering of hairs on his face', 'bit of peach fuzz on his chin', 'long, luxurious beard', 'long, well-kempt beard', 'rather wild, unkempt beard', 'dreadful beard'].random()
@@ -328,10 +330,10 @@ setup.createRace = function (npc) {
       }
       break
     case 'dragonborn':
-      npc.racenote = npc.race
+      npc.raceNote = npc.race
       break
     case 'tiefling':
-      npc.racenote = npc.race
+      npc.raceNote = npc.race
       if (npc.gender === 'man') {
         if (npc.beardRoll >= 70) {
           npc.beard = ['scraggly beard', 'long, flowing beard', 'five o clock shadow', 'neckbeard', 'well-groomed moustache', 'goatee', 'well-loved beard, with ornamental beads woven into it', 'sideburns', 'smattering of hairs on his face', 'bit of peach fuzz on his chin', 'long, luxurious beard', 'long, well-kempt beard', 'rather wild, unkempt beard', 'dreadful beard'].random()
@@ -339,7 +341,7 @@ setup.createRace = function (npc) {
       }
       break
     case 'half-elf':
-      npc.racenote = npc.race
+      npc.raceNote = npc.race
       if (npc.gender === 'man') {
         if (npc.beardRoll >= 57) {
           npc.beard = ['scraggly beard', 'long, flowing beard', 'five o clock shadow', 'neckbeard', 'well-groomed moustache', 'goatee', 'well-loved beard, with ornamental beads woven into it', 'sideburns', 'smattering of hairs on his face', 'bit of peach fuzz on his chin', 'long, luxurious beard', 'long, well-kempt beard', 'rather wild, unkempt beard', 'dreadful beard'].random()
@@ -347,7 +349,7 @@ setup.createRace = function (npc) {
       }
       break
     case 'gnome':
-      npc.racenote = npc.race
+      npc.raceNote = npc.race
       if (npc.gender === 'man') {
         if (npc.beardRoll >= 37) {
           npc.beard = ['scraggly beard', 'long, flowing beard', 'five o clock shadow', 'neckbeard', 'well-groomed moustache', 'goatee', 'well-loved beard, with ornamental beads woven into it', 'sideburns', 'smattering of hairs on his face', 'bit of peach fuzz on his chin', 'long, luxurious beard', 'long, well-kempt beard', 'rather wild, unkempt beard', 'dreadful beard'].random()
@@ -355,7 +357,7 @@ setup.createRace = function (npc) {
       }
       break
     default:
-      npc.racenote = npc.height + ' ' + npc.gender
+      npc.raceNote = npc.height + ' ' + npc.gender
       if (npc.gender === 'man') {
         if (npc.beardRoll >= 27) {
           npc.beard = ['scraggly beard', 'long, flowing beard', 'five o clock shadow', 'neckbeard', 'well-groomed moustache', 'goatee', 'well-loved beard, with ornamental beads woven into it', 'sideburns', 'smattering of hairs on his face', 'bit of peach fuzz on his chin', 'long, luxurious beard', 'long, well-kempt beard', 'rather wild, unkempt beard', 'dreadful beard'].random()

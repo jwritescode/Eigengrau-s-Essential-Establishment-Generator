@@ -5273,7 +5273,7 @@ setup.createTemple = function (base) {
 //           State.variables.adventureGoalNPC = goalNPC;
 //           Object.assign(adventure, {
 //               goalNPC: goalNPC,
-//               goal: "rescue " + adventureGoalNPC.name + ", a " + adventureGoalNPC.racenote + " who was captured and taken prisoner.",
+//               goal: "rescue " + adventureGoalNPC.name + ", a " + adventureGoalNPC.raceNote + " who was captured and taken prisoner.",
 //           });
 //           break;
 //   case "discover the fate of a previous adventuring party.":
@@ -5281,7 +5281,7 @@ setup.createTemple = function (base) {
 //           State.variables.adventureGoalNPC = goalNPC;
 //           Object.assign(adventure, {
 //               goalNPC: goalNPC,
-//               goal: "rescue " + adventureGoalNPC.name + ", a " + adventureGoalNPC.racenote + " who was captured and taken prisoner.",
+//               goal: "rescue " + adventureGoalNPC.name + ", a " + adventureGoalNPC.raceNote + " who was captured and taken prisoner.",
 //           });
 //           break;
 //   case "find an npc who disappeared in the area.":
@@ -5289,7 +5289,7 @@ setup.createTemple = function (base) {
 //           State.variables.adventureGoalNPC = goalNPC;
 //           Object.assign(adventure, {
 //               goalNPC: goalNPC,
-//               goal: "find " + adventureGoalNPC.name + ", a " + adventureGoalNPC.racenote + " who disappeared in the area.",
+//               goal: "find " + adventureGoalNPC.name + ", a " + adventureGoalNPC.raceNote + " who disappeared in the area.",
 //           });
 //           break;
 //   case "escort an npc to a destination.":
@@ -5297,7 +5297,7 @@ setup.createTemple = function (base) {
 //           State.variables.adventureGoalNPC = goalNPC;
 //           Object.assign(adventure, {
 //               goalNPC: goalNPC,
-//               goal: "escort " + adventureGoalNPC.name + ", a " + adventureGoalNPC.racenote + " who needs protection on the way to another place.",
+//               goal: "escort " + adventureGoalNPC.name + ", a " + adventureGoalNPC.raceNote + " who needs protection on the way to another place.",
 //           });
 //           break;
 //   case "discover the fate of a missing group of explorers.":
@@ -5313,7 +5313,7 @@ setup.createTemple = function (base) {
 //           State.variables.adventureGoalNPC = goalNPC;
 //           Object.assign(adventure, {
 //               goalNPC: goalNPC,
-//               goal: "rescue " + adventureGoalNPC.name + ", a " + adventureGoalNPC.racenote + " who was captured and taken prisoner.",
+//               goal: "rescue " + adventureGoalNPC.name + ", a " + adventureGoalNPC.raceNote + " who was captured and taken prisoner.",
 //           });
 //           break;
 //   case "rescue a character, monster, or object from a natural or unnatural disaster.":
@@ -5321,7 +5321,7 @@ setup.createTemple = function (base) {
 //           State.variables.adventureGoalNPC = goalNPC;
 //           Object.assign(adventure, {
 //               goalNPC: goalNPC,
-//               goal: "rescue " + adventureGoalNPC.name + ", a " + adventureGoalNPC.racenote + " who was caught in a natural disaster.",
+//               goal: "rescue " + adventureGoalNPC.name + ", a " + adventureGoalNPC.raceNote + " who was caught in a natural disaster.",
 //           });
 //
 //
@@ -5361,7 +5361,7 @@ setup.createTemple = function (base) {
 //           State.variables.adventureVillain = villain;
 //           Object.assign(adventure, {
 //                 adventureVillain: adventureVillain,
-//                 villain: adventureVillain.racenote + " called " + adventureVillain.name + " hellbent on revenge.",
+//                 villain: adventureVillain.raceNote + " called " + adventureVillain.name + " hellbent on revenge.",
 //           });
 //           break;
 //   case "humanoid schemer seeking to rule":
@@ -5369,7 +5369,7 @@ setup.createTemple = function (base) {
 //           State.variables.adventureVillain = villain;
 //           Object.assign(adventure, {
 //                 adventureVillain: adventureVillain,
-//                 villain: "conniving" + adventureVillain.racenote + "called " + adventureVillain.name + " who seeks power",
+//                 villain: "conniving" + adventureVillain.raceNote + "called " + adventureVillain.name + " who seeks power",
 //           });
 //           break;
 //   case "humanoid criminal mastermind":
@@ -5377,7 +5377,7 @@ setup.createTemple = function (base) {
 //           State.variables.adventureVillain = villain;
 //           Object.assign(adventure, {
 //                 adventureVillain: adventureVillain,
-//                 villain: "conniving" + adventureVillain.racenote + "called " + adventureVillain.name + " who seeks to build a criminal empire",
+//                 villain: "conniving" + adventureVillain.raceNote + "called " + adventureVillain.name + " who seeks to build a criminal empire",
 //           });
 //           break;
 //   case "humanoid raider or ravager":
@@ -5393,7 +5393,7 @@ setup.createTemple = function (base) {
 //           State.variables.adventureVillain = villain;
 //           Object.assign(adventure, {
 //                 adventureVillain: adventureVillain,
-//                 villain: adventureVillain.racenote + " called " + adventureVillain.name + " who was placed under a curse"
+//                 villain: adventureVillain.raceNote + " called " + adventureVillain.name + " who was placed under a curse"
 //           });
 //           break;
 //   case "misguided humanoid zealot":
@@ -5401,7 +5401,7 @@ setup.createTemple = function (base) {
 //           State.variables.adventureVillain = villain;
 //           Object.assign(adventure, {
 //                 adventureVillain: adventureVillain,
-//                 villain: "misguided" + adventureVillain.racenote + "zealot called " + adventureVillain.name,
+//                 villain: "misguided" + adventureVillain.raceNote + "zealot called " + adventureVillain.name,
 //           });
 //           break;
 //   default:
@@ -8367,7 +8367,7 @@ setup.createNPC = function (base) {
 
   var beard
   var beardRoll = random(1, 99)
-  var currentproject
+  var currentProject
   var vocalPattern
   var descriptor = []
   var availableLanguages
@@ -8420,7 +8420,7 @@ setup.createNPC = function (base) {
     raceName: npcData.raceTraits[race].raceName,
     raceAdjective: npcData.raceTraits[race].raceAdjective,
     raceLanguage: npcData.raceTraits[race].raceLanguage,
-    currentproject: currentproject,
+    currentProject: currentProject,
     mundane: mundane,
     hasClass: hasClass,
     isVillain: isVillain,
@@ -9556,7 +9556,7 @@ setup.createRace = function (npc) {
 
   switch (npc.race) {
     case 'human':
-      npc.racenote = npc.height + ' ' + npc.gender
+      npc.raceNote = npc.height + ' ' + npc.gender
       if (npc.gender === 'man') {
         npc.racesingular = 'man'
         if (npc.beardRoll >= 27) {
@@ -9567,7 +9567,7 @@ setup.createRace = function (npc) {
       }
       break
     case 'elf':
-      npc.racenote = npc.race
+      npc.raceNote = npc.race
       if (npc.gender === 'man') {
         if (npc.beardRoll >= 87) {
           npc.beard = ['scraggly beard', 'long, flowing beard', 'five o clock shadow', 'neckbeard', 'well-groomed moustache', 'goatee', 'well-loved beard, with ornamental beads woven into it', 'sideburns', 'smattering of hairs on his face', 'bit of peach fuzz on his chin', 'long, luxurious beard', 'long, well-kempt beard', 'rather wild, unkempt beard', 'dreadful beard'].random()
@@ -9575,7 +9575,7 @@ setup.createRace = function (npc) {
       }
       break
     case 'dwarf':
-      npc.racenote = npc.race
+      npc.raceNote = npc.race
       if (npc.gender === 'man') {
         if (npc.beardRoll >= 2) {
           npc.beard = ['scraggly beard', 'long, flowing beard', 'well-groomed beard going down to his chest', 'goatee', 'goatee that seems to be trying to level up into a beard', 'well-loved beard, with ornamental beads woven into it', 'sideburns', 'long, luxurious beard', 'long, well-kempt beard', 'rather wild, unkempt beard', 'dreadful beard'].random()
@@ -9583,7 +9583,7 @@ setup.createRace = function (npc) {
       }
       break
     case 'halfling':
-      npc.racenote = npc.race
+      npc.raceNote = npc.race
       if (npc.gender === 'man') {
         if (npc.beardRoll >= 92) {
           npc.beard = ['scraggly beard', 'long, flowing beard', 'five o clock shadow', 'neckbeard', 'well-groomed moustache', 'goatee', 'well-loved beard, with ornamental beads woven into it', 'sideburns', 'smattering of hairs on his face', 'bit of peach fuzz on his chin', 'long, luxurious beard', 'long, well-kempt beard', 'rather wild, unkempt beard', 'dreadful beard'].random()
@@ -9591,7 +9591,7 @@ setup.createRace = function (npc) {
       }
       break
     case 'half-orc':
-      npc.racenote = npc.race
+      npc.raceNote = npc.race
       if (npc.gender === 'man') {
         if (npc.beardRoll >= 75) {
           npc.beard = ['scraggly beard', 'long, flowing beard', 'five o clock shadow', 'neckbeard', 'well-groomed moustache', 'goatee', 'well-loved beard, with ornamental beads woven into it', 'sideburns', 'smattering of hairs on his face', 'bit of peach fuzz on his chin', 'long, luxurious beard', 'long, well-kempt beard', 'rather wild, unkempt beard', 'dreadful beard'].random()
@@ -9599,10 +9599,10 @@ setup.createRace = function (npc) {
       }
       break
     case 'dragonborn':
-      npc.racenote = npc.race
+      npc.raceNote = npc.race
       break
     case 'tiefling':
-      npc.racenote = npc.race
+      npc.raceNote = npc.race
       if (npc.gender === 'man') {
         if (npc.beardRoll >= 70) {
           npc.beard = ['scraggly beard', 'long, flowing beard', 'five o clock shadow', 'neckbeard', 'well-groomed moustache', 'goatee', 'well-loved beard, with ornamental beads woven into it', 'sideburns', 'smattering of hairs on his face', 'bit of peach fuzz on his chin', 'long, luxurious beard', 'long, well-kempt beard', 'rather wild, unkempt beard', 'dreadful beard'].random()
@@ -9610,7 +9610,7 @@ setup.createRace = function (npc) {
       }
       break
     case 'half-elf':
-      npc.racenote = npc.race
+      npc.raceNote = npc.race
       if (npc.gender === 'man') {
         if (npc.beardRoll >= 57) {
           npc.beard = ['scraggly beard', 'long, flowing beard', 'five o clock shadow', 'neckbeard', 'well-groomed moustache', 'goatee', 'well-loved beard, with ornamental beads woven into it', 'sideburns', 'smattering of hairs on his face', 'bit of peach fuzz on his chin', 'long, luxurious beard', 'long, well-kempt beard', 'rather wild, unkempt beard', 'dreadful beard'].random()
@@ -9618,7 +9618,7 @@ setup.createRace = function (npc) {
       }
       break
     case 'gnome':
-      npc.racenote = npc.race
+      npc.raceNote = npc.race
       if (npc.gender === 'man') {
         if (npc.beardRoll >= 37) {
           npc.beard = ['scraggly beard', 'long, flowing beard', 'five o clock shadow', 'neckbeard', 'well-groomed moustache', 'goatee', 'well-loved beard, with ornamental beads woven into it', 'sideburns', 'smattering of hairs on his face', 'bit of peach fuzz on his chin', 'long, luxurious beard', 'long, well-kempt beard', 'rather wild, unkempt beard', 'dreadful beard'].random()
@@ -9626,7 +9626,7 @@ setup.createRace = function (npc) {
       }
       break
     default:
-      npc.racenote = npc.height + ' ' + npc.gender
+      npc.raceNote = npc.height + ' ' + npc.gender
       if (npc.gender === 'man') {
         if (npc.beardRoll >= 27) {
           npc.beard = ['scraggly beard', 'long, flowing beard', 'five o clock shadow', 'neckbeard', 'well-groomed moustache', 'goatee', 'well-loved beard, with ornamental beads woven into it', 'sideburns', 'smattering of hairs on his face', 'bit of peach fuzz on his chin', 'long, luxurious beard', 'long, well-kempt beard', 'rather wild, unkempt beard', 'dreadful beard'].random()
@@ -11625,7 +11625,7 @@ setup.linguisticDrift = function (name) {
     &lt;td&gt;&lt;&lt;money _item.cost&gt;&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;&lt;/for&gt;&gt;&lt;/table&gt;&lt;&lt;/switch&gt;&gt;
 
-  &lt;&lt;/nobr&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="ChemistTalk" tags="" position="1100,100">$chemist.firstName looks $chemist.currentMood, and idly shifts a box of &lt;&lt;print either($chemist.ingredients)&gt;&gt; as $chemist.heshe talks. The $chemist.racenote &lt;&lt;print $chemist.chitchat.random()&gt;&gt; as you peruse the shop. $chemist.firstName tells you that $chemist.heshe is working on a $brew.potionPurpose, and points to the &lt;&lt;linkappend $brew.containerDescription&gt;&gt;. Looking inside the $brew.vesselType, you see a $brew.liquidDescription bubbling away&lt;&lt;/linkappend&gt;&gt;.</tw-passagedata><tw-passagedata pid="10" name="InitAlchemist" tags="output" position="1225,100">&lt;&lt;linkreplace &quot;Rename &lt;strong&gt;$alchemist.name&lt;/strong&gt;&quot;&gt;&gt;&lt;h3&gt;&lt;&lt;textbox &quot;$alchemist.name&quot; $alchemist.name&gt;&gt;&lt;/h3&gt;&lt;&lt;/linkreplace&gt;&gt;
+  &lt;&lt;/nobr&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="ChemistTalk" tags="" position="1100,100">$chemist.firstName looks $chemist.currentMood, and idly shifts a box of &lt;&lt;print either($chemist.ingredients)&gt;&gt; as $chemist.heshe talks. The $chemist.raceNote &lt;&lt;print $chemist.chitchat.random()&gt;&gt; as you peruse the shop. $chemist.firstName tells you that $chemist.heshe is working on a $brew.potionPurpose, and points to the &lt;&lt;linkappend $brew.containerDescription&gt;&gt;. Looking inside the $brew.vesselType, you see a $brew.liquidDescription bubbling away&lt;&lt;/linkappend&gt;&gt;.</tw-passagedata><tw-passagedata pid="10" name="InitAlchemist" tags="output" position="1225,100">&lt;&lt;linkreplace &quot;Rename &lt;strong&gt;$alchemist.name&lt;/strong&gt;&quot;&gt;&gt;&lt;h3&gt;&lt;&lt;textbox &quot;$alchemist.name&quot; $alchemist.name&gt;&gt;&lt;/h3&gt;&lt;&lt;/linkreplace&gt;&gt;
 
 &lt;span class=&quot;tip&quot; title=&quot;How wealthy is the patronage?&quot;&gt;Alchemist Wealth: &lt;&lt;numberslider &quot;$alchemist.wealthRoll&quot; $alchemist.wealthRoll 1 100 1&gt;&gt;&lt;/span&gt;
 
@@ -12379,7 +12379,7 @@ When you&#39;re ready, here&#39;s the [[alchemist|AlchemistOutput]]
 	idle: [&quot;talking with a customer&quot;, &quot;picking $blacksmith.hisher nose&quot;, &quot;playing a card game by $blacksmith.himherself&quot;, &quot;sharpening a knife&quot;, &quot;stocking the forge with fresh coals&quot;, &quot;lugging a piece of metal to be worked on&quot;, &quot;wiping the sweat from $blacksmith.hisher brow&quot;, &quot;taking a drink of water&quot;, &quot;sweating profusely from exertion&quot;, &quot;re-stocking the shop with new metalcrafts&quot;, &quot;hanging a new looking sword up on the wall&quot;, &quot;leaning back in a chair behind the counter playing with a hammer&quot;, &quot;unpacking a large crate that looks to be full of metal ingots of some sort&quot;, &quot;eyeing up the craftsmanship of a large &lt;&lt;print either($smithy.weapons)&gt;&gt;&quot;, &quot;pouring molten metal into a cast in the far back&quot;, &quot;stoking the flames of the forge&quot;],
 	owner: either([&quot;owner&quot;, &quot;caretaker&quot;, &quot;proud owner&quot;, &quot;proprietor&quot;, &quot;current owner&quot;, &quot;chief owner&quot;, &quot;master smith&quot;, &quot;resident smith&quot;]),
 	greeting: [&quot;nods at you&quot;, &quot;welcomes you warmly&quot;, &quot;smiles and greets you&quot;, &quot;raises a hand with a wave&quot;, &quot;sizes you up, before $blacksmith.heshe nods at you&quot;, &quot;checks you out for just a moment before smiling at you&quot;, &quot;grunts in your direction when you walk in&quot;, &quot;eyes you up and down slowly&quot;, &quot;stops what $blacksmith.heshe is doing and looks your way&quot;],
-	currentproject: either([&quot;a &lt;&lt;print either($smithy.weapons)&gt;&gt; for Lord $lord.lastName&#39;s son.&quot;,
+	currentProject: either([&quot;a &lt;&lt;print either($smithy.weapons)&gt;&gt; for Lord $lord.lastName&#39;s son.&quot;,
 									&quot;a &lt;&lt;print either($smithy.weapons)&gt;&gt; which I&#39;m hoping to sell on the market in a couple day&#39;s time.&quot;,
 									&quot;a &lt;&lt;print either($smithy.weapons)&gt;&gt; which I&#39;m hoping to sell on the market in a couple day&#39;s time.&quot;,
 									&quot;a mace for the priest; nothing too special, just because his old one was starting to get a bit rusty.&quot;,
@@ -12393,7 +12393,7 @@ When you&#39;re ready, here&#39;s the [[alchemist|AlchemistOutput]]
 									&quot;I&#39;m really just working on fleshing out the stock of the shop at the moment. Mostly general items like nails, horeshoes, and what not&quot;])
 									})&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="BlacksmithTalk" tags="" position="475,225">&lt;&lt;linkreplace &quot;&lt;h4&gt;Talk with $blacksmith.name&lt;/h4&gt;&quot; t8n&gt;&gt;
 &lt;h3&gt;$blacksmith.name&lt;/h3&gt;
-$blacksmith.firstName looks $blacksmith.currentMood, and while you chat, $blacksmith.heshe moves around the shop, preparing a new project for work. $blacksmith.firstName &lt;&lt;print either(&quot;loves working in $smithy.name&quot;, &quot;hates working in $smithy.name&quot;, &quot;finds working in the $smithy.name boring&quot;, &quot;finds working in the smithy fun&quot;, &quot;finds working in the $smithy.name rather lonely&quot;, &quot;wishes $blacksmith.heshe could go adventuring instead of working here&quot;)&gt;&gt;, and says that the patrons of $smithy.name are &lt;&lt;print either(&quot;alright, especially the farmers, who are pretty decent blokes&quot;, &quot;a bit stingy, especially the farmers&quot;, &quot;somewhat stingy&quot;, &quot;fine, but rather dull&quot;, &quot;way too exciting for $blacksmith.firstName&#39;s tastes&quot;, &quot;nice and friendly&quot;, &quot;nice and friendly, but rather boring- nothing interesting is ever ordered&quot;, &quot;just a bunch of hicks&quot;, &quot;a bunch of weirdos&quot;, &quot;pretty normal stock, nothing out of the ordinary&quot;, &quot;a bit rude and stuck up&quot;, &quot;fairly generous with their coin&quot;)&gt;&gt;. You ask $blacksmith.firstName about $blacksmith.hisher current project, and $blacksmith.heshe says &quot;I&#39;m working on $blacksmith.currentproject&quot;&lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="InitSmithy" tags="output" position="600,225">&lt;&lt;linkreplace &quot;Rename &lt;strong&gt;$smithy.name&lt;/strong&gt;&quot;&gt;&gt;&lt;h3&gt;&lt;&lt;textbox &quot;$smithy.name&quot; $smithy.name&gt;&gt;&lt;/h3&gt;&lt;&lt;/linkreplace&gt;&gt;
+$blacksmith.firstName looks $blacksmith.currentMood, and while you chat, $blacksmith.heshe moves around the shop, preparing a new project for work. $blacksmith.firstName &lt;&lt;print either(&quot;loves working in $smithy.name&quot;, &quot;hates working in $smithy.name&quot;, &quot;finds working in the $smithy.name boring&quot;, &quot;finds working in the smithy fun&quot;, &quot;finds working in the $smithy.name rather lonely&quot;, &quot;wishes $blacksmith.heshe could go adventuring instead of working here&quot;)&gt;&gt;, and says that the patrons of $smithy.name are &lt;&lt;print either(&quot;alright, especially the farmers, who are pretty decent blokes&quot;, &quot;a bit stingy, especially the farmers&quot;, &quot;somewhat stingy&quot;, &quot;fine, but rather dull&quot;, &quot;way too exciting for $blacksmith.firstName&#39;s tastes&quot;, &quot;nice and friendly&quot;, &quot;nice and friendly, but rather boring- nothing interesting is ever ordered&quot;, &quot;just a bunch of hicks&quot;, &quot;a bunch of weirdos&quot;, &quot;pretty normal stock, nothing out of the ordinary&quot;, &quot;a bit rude and stuck up&quot;, &quot;fairly generous with their coin&quot;)&gt;&gt;. You ask $blacksmith.firstName about $blacksmith.hisher current project, and $blacksmith.heshe says &quot;I&#39;m working on $blacksmith.currentProject&quot;&lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="InitSmithy" tags="output" position="600,225">&lt;&lt;linkreplace &quot;Rename &lt;strong&gt;$smithy.name&lt;/strong&gt;&quot;&gt;&gt;&lt;h3&gt;&lt;&lt;textbox &quot;$smithy.name&quot; $smithy.name&gt;&gt;&lt;/h3&gt;&lt;&lt;/linkreplace&gt;&gt;
 
 &lt;span class=&quot;tip&quot; title=&quot;How wealthy is the patronage?&quot;&gt;Smithy Wealth: &lt;&lt;numberslider &quot;$smithy.wealthRoll&quot; $smithy.wealthRoll 1 100 1&gt;&gt;&lt;/span&gt;
 
@@ -12474,7 +12474,7 @@ When you&#39;re ready, here&#39;s the [[smithy|SmithyOutput]]
 &lt;&lt;/if&gt;&gt;
 
 &lt;span id=&quot;smithy-customer-name&quot;&gt;&lt;h3&gt;$smithycustomer.name&lt;/h3&gt;&lt;/span&gt;
-&lt;&lt;/nobr&gt;&gt;A $smithycustomer.racenote is &lt;&lt;print $smithycustomer.idle.random()&gt;&gt; as they browse the shop, and you strike up a conversation with $smithycustomer.himher. &lt;&lt;print $smithycustomer.heshe.toUpperFirst()&gt;&gt; introduces $smithycustomer.himherself as $smithycustomer.name, _notablecustomer and you notice $smithycustomer.heshe has $smithycustomer.physicalTrait. $smithycustomer.firstName tells you that $smithycustomer.heshe _tense a $smithycustomer.dndclass, and $smithycustomer.adventure. &lt;&lt;print $smithycustomer.heshe.toUpperFirst()&gt;&gt; looks at you with $smithycustomer.hisher $smithycustomer.eyes eyes for a moment, and says &quot;Actually, you might be interested; &lt;&lt;print either(&quot;&lt;&lt;print $plothook.people.random()&gt;&gt;&quot;, &quot;&lt;&lt;print $plothook.rumour.random()&gt;&gt;&quot;)&gt;&gt;&quot;</tw-passagedata><tw-passagedata pid="18" name="SmithyInventory" tags="" position="975,225">&lt;&lt;set $smithy.inventory to [
+&lt;&lt;/nobr&gt;&gt;A $smithycustomer.raceNote is &lt;&lt;print $smithycustomer.idle.random()&gt;&gt; as they browse the shop, and you strike up a conversation with $smithycustomer.himher. &lt;&lt;print $smithycustomer.heshe.toUpperFirst()&gt;&gt; introduces $smithycustomer.himherself as $smithycustomer.name, _notablecustomer and you notice $smithycustomer.heshe has $smithycustomer.physicalTrait. $smithycustomer.firstName tells you that $smithycustomer.heshe _tense a $smithycustomer.dndclass, and $smithycustomer.adventure. &lt;&lt;print $smithycustomer.heshe.toUpperFirst()&gt;&gt; looks at you with $smithycustomer.hisher $smithycustomer.eyes eyes for a moment, and says &quot;Actually, you might be interested; &lt;&lt;print either(&quot;&lt;&lt;print $plothook.people.random()&gt;&gt;&quot;, &quot;&lt;&lt;print $plothook.rumour.random()&gt;&gt;&quot;)&gt;&gt;&quot;</tw-passagedata><tw-passagedata pid="18" name="SmithyInventory" tags="" position="975,225">&lt;&lt;set $smithy.inventory to [
       {name: &quot;Dagger&quot;, cost: 200, availability: 1, type: &quot;weapon&quot;},
       {name: &quot;Handaxe&quot;, cost: 500, availability: 1, type: &quot;weapon&quot;},
       {name: &quot;Javelin&quot;, cost: 50, availability: 2, type: &quot;weapon&quot;},
@@ -13952,7 +13952,7 @@ Raiders</tw-passagedata><tw-passagedata pid="40" name="PatreonSupporters" tags="
 
 &lt;&lt;set $pimp.greeting to [&quot;nods at you&quot;, &quot;welcomes you warmly&quot;, &quot;smiles and greets you&quot;, &quot;raises a hand with a wave&quot;, &quot;sizes you up, before $pimp.heshe nods at you&quot;, &quot;checks you out for just a moment before smiling at you&quot;]&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="BrothelOutput" tags="brothel" position="725,600">&lt;h1&gt;$brothel.name&lt;/h1&gt;&lt;&lt;include &quot;TownMicroEventsOutput&quot;&gt;&gt;&lt;span class=&quot;firstcharacter&quot;&gt;Y&lt;/span&gt;ou make your way down $brothel.road, and enter $brothel.name. When people talk about $brothel.name, they say that $brothel.talk. Apparently, it specialises in $brothel.speciality.
 
-Inside, the $brothel.size $brothel.material building is $brothel.cleanliness. You notice $brothel.notice. The $pimp.title is &lt;&lt;print $pimp.idle.random()&gt;&gt;. The $pimp.racenote &lt;&lt;print either($pimp.greeting)&gt;&gt;, and &lt;&lt;print either(&quot;saunters&quot;, &quot;walks&quot;, &quot;strolls&quot;, &quot;walks&quot;, &quot;slowly walks&quot;, &quot;swaggers&quot;, &quot;quickly walks&quot;, &quot;slides&quot;)&gt;&gt;over to you, and introduces $pimp.himherself as &lt;&lt;profile $pimp&gt;&gt;, the $pimp.title of $brothel.name, and asks what $pimp.heshe can do for you.
+Inside, the $brothel.size $brothel.material building is $brothel.cleanliness. You notice $brothel.notice. The $pimp.title is &lt;&lt;print $pimp.idle.random()&gt;&gt;. The $pimp.raceNote &lt;&lt;print either($pimp.greeting)&gt;&gt;, and &lt;&lt;print either(&quot;saunters&quot;, &quot;walks&quot;, &quot;strolls&quot;, &quot;walks&quot;, &quot;slowly walks&quot;, &quot;swaggers&quot;, &quot;quickly walks&quot;, &quot;slides&quot;)&gt;&gt;over to you, and introduces $pimp.himherself as &lt;&lt;profile $pimp&gt;&gt;, the $pimp.title of $brothel.name, and asks what $pimp.heshe can do for you.
 
 Rumours abound in whorehouses, and $brothel.name is no different; apparently, $brothel.rumour</tw-passagedata><tw-passagedata pid="47" name="Markets" tags="" position="850,600">&lt;&lt;set $marketSellerA to setup.createNPC({profession: &quot;merchant&quot;, hasClass: false})&gt;&gt;
 &lt;&lt;set $marketSellerB to setup.createNPC({profession: &quot;merchant&quot;, hasClass: false})&gt;&gt;
@@ -14227,29 +14227,29 @@ Rumours abound in whorehouses, and $brothel.name is no different; apparently, $b
 &quot;one- or two-man tent&quot;,
 &quot;myriad of pockets in the vendor&#39;s clothes&quot;]&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="MarketOutput" tags="market" position="975,600">&lt;h1&gt;The Markets of $town.name&lt;/h1&gt;You wander through the streets of $town.name, and come across the market, which is located in $market.location. It seems that the vendors are organised by $market.organisation. The market is known for $market.draw, and is $market.cleanliness.
 
-There&#39;s a &lt;&lt;profile $marketSellerA $marketSellerA.racenote&gt;&gt; selling &lt;&lt;print either($market.selling)&gt;&gt; from a &lt;&lt;print either($market.tent)&gt;&gt;.
+There&#39;s a &lt;&lt;profile $marketSellerA $marketSellerA.raceNote&gt;&gt; selling &lt;&lt;print either($market.selling)&gt;&gt; from a &lt;&lt;print either($market.tent)&gt;&gt;.
 
-A &lt;&lt;profile $marketSellerB $marketSellerB.racenote&gt;&gt; shouting out &quot;&lt;&lt;print either($market.shouts)&gt;&gt; &lt;&lt;print either($market.suffix)&gt;&gt;&quot; from a &lt;&lt;print either($market.tent)&gt;&gt;.
+A &lt;&lt;profile $marketSellerB $marketSellerB.raceNote&gt;&gt; shouting out &quot;&lt;&lt;print either($market.shouts)&gt;&gt; &lt;&lt;print either($market.suffix)&gt;&gt;&quot; from a &lt;&lt;print either($market.tent)&gt;&gt;.
 
-Nearby, a &lt;&lt;profile $marketSellerC $marketSellerC.racenote&gt;&gt; is selling &lt;&lt;print either($market.selling)&gt;&gt;.
+Nearby, a &lt;&lt;profile $marketSellerC $marketSellerC.raceNote&gt;&gt; is selling &lt;&lt;print either($market.selling)&gt;&gt;.
 
-A &lt;&lt;profile $marketSellerE $marketSellerE.racenote&gt;&gt; is shouting out &quot;&lt;&lt;print either($market.shouts)&gt;&gt; &lt;&lt;print either($market.suffix)&gt;&gt;&quot; from a &lt;&lt;print either($market.tent)&gt;&gt;.
+A &lt;&lt;profile $marketSellerE $marketSellerE.raceNote&gt;&gt; is shouting out &quot;&lt;&lt;print either($market.shouts)&gt;&gt; &lt;&lt;print either($market.suffix)&gt;&gt;&quot; from a &lt;&lt;print either($market.tent)&gt;&gt;.
 
-And a &lt;&lt;profile $marketSellerD $marketSellerD.racenote&gt;&gt; is selling magical trinkets from a  &lt;&lt;print either($market.tent)&gt;&gt;. Or, at least, they&#39;re supposedly magical trinkets.
+And a &lt;&lt;profile $marketSellerD $marketSellerD.raceNote&gt;&gt; is selling magical trinkets from a  &lt;&lt;print either($market.tent)&gt;&gt;. Or, at least, they&#39;re supposedly magical trinkets.
 
-&lt;&lt;linkreplace &quot;Magical trinket seller&quot;&gt;&gt;The $marketSellerD.manwoman beckons you over to $marketSellerD.hisher stall, and introduces $marketSellerD.himherself as &lt;&lt;profile $marketSellerD&gt;&gt;, a purveyor of fine goods. The $marketSellerD.racenote asks you for your ring size, and then $marketSellerD.heshe reaches below $marketSellerD.hisher table, and procures a ring...
+&lt;&lt;linkreplace &quot;Magical trinket seller&quot;&gt;&gt;The $marketSellerD.manwoman beckons you over to $marketSellerD.hisher stall, and introduces $marketSellerD.himherself as &lt;&lt;profile $marketSellerD&gt;&gt;, a purveyor of fine goods. The $marketSellerD.raceNote asks you for your ring size, and then $marketSellerD.heshe reaches below $marketSellerD.hisher table, and procures a ring...
 
 &lt;&lt;nobr&gt;&gt;&lt;&lt;linkreplace &quot;&lt;h4&gt;Look at the ring!&lt;/h4&gt;&quot;&gt;&gt;
 &lt;&lt;set $marketRing to setup.createRing()&gt;&gt;
     &lt;&lt;replace &quot;#ring&quot;&gt;&gt;
           &lt;div class=&quot;descriptive&quot;&gt;
             &lt;h3&gt;A $marketRing.material ring&lt;/h3&gt;
-            The $marketSellerD.racenote hands you a $marketRing.material ring which is decorated with a $marketRing.decoration. In the centre is a $marketRing.gemstone. $marketSellerD.firstName says that it was intended for $marketRing.intendedowner, and it grants the power to $marketRing.power&lt;/div&gt;&lt;blockquote&gt;This ring works $marketRing.works, and works best $marketRing.activation. It grants the power to $marketRing.power, but $marketRing.cost&lt;/blockquote&gt;
+            The $marketSellerD.raceNote hands you a $marketRing.material ring which is decorated with a $marketRing.decoration. In the centre is a $marketRing.gemstone. $marketSellerD.firstName says that it was intended for $marketRing.intendedowner, and it grants the power to $marketRing.power&lt;/div&gt;&lt;blockquote&gt;This ring works $marketRing.works, and works best $marketRing.activation. It grants the power to $marketRing.power, but $marketRing.cost&lt;/blockquote&gt;
     &lt;&lt;/replace&gt;&gt;&lt;&lt;link &quot;&lt;h4&gt;Look at another ring&lt;/h4&gt;&quot;&gt;&gt;&lt;&lt;set $marketRing to setup.createRing()&gt;&gt;
         &lt;&lt;replace &quot;#ring&quot;&gt;&gt;
               &lt;div class=&quot;descriptive&quot;&gt;
                 &lt;h3&gt;A $marketRing.material ring&lt;/h3&gt;
-                &lt;&lt;print either(&quot;The $marketSellerD.racenote&quot;, &quot;$marketSellerD.firstName&quot;)&gt;&gt; &lt;&lt;print either(&quot;hands you&quot;, &quot;passes you&quot;, &quot;procures another ring, this one&quot;)&gt;&gt; a $marketRing.material ring which is decorated with a $marketRing.decoration. &lt;&lt;print either(&quot;In the centre is&quot;, &quot;The gemstone in the middle is&quot;)&gt;&gt; a $marketRing.gemstone. $marketSellerD.firstName says that it was intended for $marketRing.intendedowner, and it grants the power to $marketRing.power&lt;/div&gt;&lt;blockquote&gt;This ring works $marketRing.works, and works best $marketRing.activation. It grants the power to $marketRing.power, but $marketRing.cost&lt;/blockquote&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
+                &lt;&lt;print either(&quot;The $marketSellerD.raceNote&quot;, &quot;$marketSellerD.firstName&quot;)&gt;&gt; &lt;&lt;print either(&quot;hands you&quot;, &quot;passes you&quot;, &quot;procures another ring, this one&quot;)&gt;&gt; a $marketRing.material ring which is decorated with a $marketRing.decoration. &lt;&lt;print either(&quot;In the centre is&quot;, &quot;The gemstone in the middle is&quot;)&gt;&gt; a $marketRing.gemstone. $marketSellerD.firstName says that it was intended for $marketRing.intendedowner, and it grants the power to $marketRing.power&lt;/div&gt;&lt;blockquote&gt;This ring works $marketRing.works, and works best $marketRing.activation. It grants the power to $marketRing.power, but $marketRing.cost&lt;/blockquote&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;span id=&quot;ring&quot;&gt;&lt;/span&gt;&lt;&lt;/nobr&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="AdventureAlternate" tags="" position="1100,600">&lt;&lt;set $adventureGorn to setup.createNPC({age: &quot;venerable&quot;, firstName: &quot;Gorn&quot;})&gt;&gt;
 &lt;&lt;set $adventureBandit to setup.createNPC({gender: &quot;man&quot;, profession: &quot;bandit&quot;, dndclass: &quot;fighter&quot;, note: &quot;$adventureBandit is currently drunk.&quot;})&gt;&gt;
@@ -14324,25 +14324,25 @@ Your loved ones embrace you, overjoyed at their release, and it seems Gorn was t
 &lt;&lt;switch $adventure.goal&gt;&gt;
     &lt;&lt;case &quot;rescue a captive.&quot;&gt;&gt;
         &lt;&lt;set $adventureGoalNPC to setup.createNPC({background: either(&quot;urchin&quot;, &quot;urchin&quot;, &quot;urchin&quot;, &quot;commoner&quot;, &quot;commoner&quot;, &quot;commoner&quot;, &quot;commoner&quot;, &quot;noble&quot;, &quot;noble&quot;), isThrowaway: true})&gt;&gt;
-        &lt;&lt;set $adventure.goal to &quot;rescue &lt;&lt;profile $adventureGoalNPC&gt;&gt;, a $adventureGoalNPC.racenote who was captured and taken prisoner.&quot;&gt;&gt;
+        &lt;&lt;set $adventure.goal to &quot;rescue &lt;&lt;profile $adventureGoalNPC&gt;&gt;, a $adventureGoalNPC.raceNote who was captured and taken prisoner.&quot;&gt;&gt;
     &lt;&lt;case &quot;discover the fate of a previous adventuring party.&quot;&gt;&gt;
         &lt;&lt;set $adventureGoalNPC to setup.createNPC({isThrowaway: true})&gt;&gt;
         &lt;&lt;set $adventure.goal to &quot;discover the fate of &lt;&lt;profile $adventureGoalNPC&gt;&gt; and $adventureGoalNPC.hisher adventuring party, who disappeared in the area.&quot;&gt;&gt;
     &lt;&lt;case &quot;find an npc who disappeared in the area.&quot;&gt;&gt;
         &lt;&lt;set $adventureGoalNPC to setup.createNPC({isThrowaway: true})&gt;&gt;
-        &lt;&lt;set $adventure.goal to &quot;find &lt;&lt;profile $adventureGoalNPC&gt;&gt;, a $adventureGoalNPC.racenote who disappeared in the area.&quot;&gt;&gt;
+        &lt;&lt;set $adventure.goal to &quot;find &lt;&lt;profile $adventureGoalNPC&gt;&gt;, a $adventureGoalNPC.raceNote who disappeared in the area.&quot;&gt;&gt;
     &lt;&lt;case &quot;escort an npc to a destination.&quot;&gt;&gt;
         &lt;&lt;set $adventureGoalNPC to setup.createNPC({isThrowaway: true})&gt;&gt;
-        &lt;&lt;set $adventure.goal to &quot;escort &lt;&lt;profile $adventureGoalNPC&gt;&gt;, a $adventureGoalNPC.racenote who needs protection on the way to another place.&quot;&gt;&gt;
+        &lt;&lt;set $adventure.goal to &quot;escort &lt;&lt;profile $adventureGoalNPC&gt;&gt;, a $adventureGoalNPC.raceNote who needs protection on the way to another place.&quot;&gt;&gt;
     &lt;&lt;case &quot;discover the fate of a missing group of explorers.&quot;&gt;&gt;
         &lt;&lt;set $adventureGoalNPC to setup.createNPC({isThrowaway: true})&gt;&gt;
         &lt;&lt;set $adventure.goal to &quot;discover the fate of &lt;&lt;profile $adventureGoalNPC&gt;&gt; and $adventureGoalNPC.hisher exploring party, who disappeared in the area.&quot;&gt;&gt;
     &lt;&lt;case &quot;break a prisoner out of a jail or prison camp.&quot;&gt;&gt;
         &lt;&lt;set $adventureGoalNPC to setup.createNPC({background: either(&quot;urchin&quot;, &quot;urchin&quot;, &quot;urchin&quot;, &quot;commoner&quot;, &quot;commoner&quot;, &quot;commoner&quot;, &quot;commoner&quot;, &quot;noble&quot;, &quot;noble&quot;), isThrowaway: true})&gt;&gt;
-        &lt;&lt;set $adventure.goal to &quot;rescue &lt;&lt;profile $adventureGoalNPC&gt;&gt;, a $adventureGoalNPC.racenote who was captured and taken prisoner.&quot;&gt;&gt;
+        &lt;&lt;set $adventure.goal to &quot;rescue &lt;&lt;profile $adventureGoalNPC&gt;&gt;, a $adventureGoalNPC.raceNote who was captured and taken prisoner.&quot;&gt;&gt;
     &lt;&lt;case &quot;rescue a character, monster, or object from a natural or unnatural disaster.&quot;&gt;&gt;
         &lt;&lt;set $adventureGoalNPC to setup.createNPC({isThrowaway: true})&gt;&gt;
-        &lt;&lt;set $adventure.goal to &quot;rescue &lt;&lt;profile $adventureGoalNPC&gt;&gt;, a $adventureGoalNPC.racenote who was caught in a natural disaster.&quot;&gt;&gt;
+        &lt;&lt;set $adventure.goal to &quot;rescue &lt;&lt;profile $adventureGoalNPC&gt;&gt;, a $adventureGoalNPC.raceNote who was caught in a natural disaster.&quot;&gt;&gt;
 &lt;&lt;/switch&gt;&gt;
 
 &lt;&lt;set $adventure.villain to either([&quot;beast or monstrosity with no particular agenda&quot;, &quot;terrible aberration bent on corruption or domination&quot;, &quot;fiend bent on corruption or destruction&quot;, &quot;dragon bent on domination and plunder&quot;, &quot;giant bent on plunder&quot;, &quot;horrible undead with any agenda&quot;, &quot;fey with a mysterious goal&quot;, &quot;humanoid cultist&quot;, &quot;humanoid conqueror&quot;, &quot;humanoid seeking revenge&quot;, &quot;humanoid schemer seeking to rule&quot;, &quot;humanoid criminal mastermind&quot;, &quot;humanoid raider or ravager&quot;, &quot;humanoid under a curse&quot;, &quot;misguided humanoid zealot&quot;])&gt;&gt;
@@ -14370,22 +14370,22 @@ Your loved ones embrace you, overjoyed at their release, and it seems Gorn was t
         &lt;&lt;set $adventure.villain to &quot;fearsome conqueror called &lt;&lt;profile $adventureVillain&gt;&gt;&quot;&gt;&gt;
     &lt;&lt;case &quot;humanoid seeking revenge&quot;&gt;&gt;
         &lt;&lt;set $adventureVillain to setup.createNPC({isThrowaway: true})&gt;&gt;
-        &lt;&lt;set $adventure.villain to &quot;$adventureVillain.racenote called &lt;&lt;profile $adventureVillain&gt;&gt; hellbent on revenge.&quot;&gt;&gt;
+        &lt;&lt;set $adventure.villain to &quot;$adventureVillain.raceNote called &lt;&lt;profile $adventureVillain&gt;&gt; hellbent on revenge.&quot;&gt;&gt;
     &lt;&lt;case &quot;humanoid schemer seeking to rule&quot;&gt;&gt;
         &lt;&lt;set $adventureVillain to setup.createNPC({isThrowaway: true})&gt;&gt;
-        &lt;&lt;set $adventure.villain to &quot;conniving $adventureVillain.racenote called &lt;&lt;profile $adventureVillain&gt;&gt; who seeks power&quot;&gt;&gt;
+        &lt;&lt;set $adventure.villain to &quot;conniving $adventureVillain.raceNote called &lt;&lt;profile $adventureVillain&gt;&gt; who seeks power&quot;&gt;&gt;
     &lt;&lt;case &quot;humanoid criminal mastermind&quot;&gt;&gt;
         &lt;&lt;set $adventureVillain to setup.createNPC({dndclass: either(&quot;sorcerer&quot;, &quot;rogue&quot;), isThrowaway: true})&gt;&gt;
-        &lt;&lt;set $adventure.villain to &quot;conniving $adventureVillain.racenote called &lt;&lt;profile $adventureVillain&gt;&gt; who seeks to build a criminal empire&quot;&gt;&gt;
+        &lt;&lt;set $adventure.villain to &quot;conniving $adventureVillain.raceNote called &lt;&lt;profile $adventureVillain&gt;&gt; who seeks to build a criminal empire&quot;&gt;&gt;
     &lt;&lt;case &quot;humanoid raider or ravager&quot;&gt;&gt;
         &lt;&lt;set $adventureVillain to setup.createNPC({dndclass: either(&quot;barbarian&quot;, &quot;fighter&quot;), isThrowaway: true})&gt;&gt;
         &lt;&lt;set $adventure.villain to &quot;fearsome raider called &lt;&lt;profile $adventureVillain&gt;&gt;&quot;&gt;&gt;
     &lt;&lt;case &quot;humanoid under a curse&quot;&gt;&gt;
         &lt;&lt;set $adventureVillain to setup.createNPC({isThrowaway: true})&gt;&gt;
-        &lt;&lt;set $adventure.villain to &quot;$adventureVillain.racenote called &lt;&lt;profile $adventureVillain&gt;&gt; who was placed under a curse&quot;&gt;&gt;
+        &lt;&lt;set $adventure.villain to &quot;$adventureVillain.raceNote called &lt;&lt;profile $adventureVillain&gt;&gt; who was placed under a curse&quot;&gt;&gt;
     &lt;&lt;case &quot;misguided humanoid zealot&quot;&gt;&gt;
         &lt;&lt;set $adventureVillain to setup.createNPC({dndclass: &quot;cleric&quot;, isThrowaway: true})&gt;&gt;
-        &lt;&lt;set $adventure.villain to &quot;misguided $adventureVillain.racenote zealot called &lt;&lt;profile $adventureVillain&gt;&gt;&quot;&gt;&gt;
+        &lt;&lt;set $adventure.villain to &quot;misguided $adventureVillain.raceNote zealot called &lt;&lt;profile $adventureVillain&gt;&gt;&quot;&gt;&gt;
     &lt;&lt;/switch&gt;&gt;
 
 
@@ -14932,7 +14932,7 @@ Tylien Birchbottom was kidnapped by a local cult at the age of 14. They keep him
 &lt;&lt;link &quot;&lt;h4&gt;Describe the weather&lt;/h4&gt;&quot;&gt;&gt;&lt;&lt;set $weather.temperatureTimer -= 16, $weather.precipitationTimer -= 8, $weather.cloudTimer&gt;&gt;&lt;&lt;nobr&gt;&gt;&lt;&lt;include &quot;TownWeatherDescriptions&quot;&gt;&gt;&lt;&lt;include &quot;TownWeatherTimer&quot;&gt;&gt;&lt;&lt;/nobr&gt;&gt;&lt;&lt;replace &quot;#weather&quot;&gt;&gt;It&#39;s currently $weather.temperatureReadout. $weather.precipitationReadout, and $weather.cloudReadout.&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;dropdown &quot;$weather.seasonChange&quot; $weather.seasonPool&gt;&gt; &lt;&lt;dropdown &quot;$town.terrainChange&quot; $town.terrainPool&gt;&gt; &lt;&lt;dropdown &quot;$town.locationChange&quot; $town.locationPool&gt;&gt;
 &lt;span id=&quot;weather&quot;&gt;&lt;/span&gt;
 &lt;&lt;link &quot;&lt;h4&gt;Generate a road&lt;/h4&gt;&quot;&gt;&gt;&lt;&lt;set $testRoad to setup.createRoad()&gt;&gt;&lt;&lt;replace &quot;#road&quot;&gt;&gt;$testRoad&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;span id=&quot;road&quot;&gt;&lt;/span&gt;
-&lt;&lt;link &quot;&lt;h4&gt;Generate some raiders&lt;/h4&gt;&quot;&gt;&gt;&lt;&lt;nobr&gt;&gt;&lt;&lt;include &quot;Raiders&quot;&gt;&gt;&lt;&lt;/nobr&gt;&gt;&lt;&lt;replace &quot;#raiders&quot;&gt;&gt;A &lt;&lt;profile $raidedvillager $raidedvillager.racenote&gt;&gt; runs up to you, and asks for you to help $raidedvillager.himher; apparently raiders have been tormenting $town.name. &lt;&lt;print $raidedvillager.heshe.toUpperFirst()&gt;&gt; continues, saying &quot;they ask for $raiders.extort, and demand $raiders.demand. They torment us by $raiders.torment, and if we disobey or act out, they $raiders.disobey. $raiders.finally&quot;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;span id=&quot;raiders&quot;&gt;&lt;/span&gt;</tw-passagedata><tw-passagedata pid="61" name="Newspaper" tags="" position="100,850">&lt;&lt;set $newspaperheadline to either([&quot;NPC attempts to become player, ridiculed.&quot;,
+&lt;&lt;link &quot;&lt;h4&gt;Generate some raiders&lt;/h4&gt;&quot;&gt;&gt;&lt;&lt;nobr&gt;&gt;&lt;&lt;include &quot;Raiders&quot;&gt;&gt;&lt;&lt;/nobr&gt;&gt;&lt;&lt;replace &quot;#raiders&quot;&gt;&gt;A &lt;&lt;profile $raidedvillager $raidedvillager.raceNote&gt;&gt; runs up to you, and asks for you to help $raidedvillager.himher; apparently raiders have been tormenting $town.name. &lt;&lt;print $raidedvillager.heshe.toUpperFirst()&gt;&gt; continues, saying &quot;they ask for $raiders.extort, and demand $raiders.demand. They torment us by $raiders.torment, and if we disobey or act out, they $raiders.disobey. $raiders.finally&quot;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;span id=&quot;raiders&quot;&gt;&lt;/span&gt;</tw-passagedata><tw-passagedata pid="61" name="Newspaper" tags="" position="100,850">&lt;&lt;set $newspaperheadline to either([&quot;NPC attempts to become player, ridiculed.&quot;,
 &quot;Underground homunculi fights discovered - homunculi sales increase.&quot;,
 &quot;Wizard house vanishes in the night, locals suspect shenanigans.&quot;,
 &quot;Doppelganger discovered in mayor&#39;s place. Townsfolk agree he&#39;s better than the old.&quot;,
@@ -15345,9 +15345,9 @@ A very belligerent (and often drunk) old man is causing problems in town. The ha
 &quot;A rich man walks through a bad part of town with obvious riches and money. If mugged, he gives it willingly. He has been doing this for the last three days.&quot;,
 &quot; small animal brushes past the PCs as they walk along a dock. After it jumps into the water, a group of sailors rushes onto the dock, firing crossbows and flinging harpoons at the ripples the animal left in the water. While the sailors curse and fire the last few missiles they have, one of the PCs notices the animal left a muddy gem on the top of her shoe.&quot;]&gt;&gt;</tw-passagedata><tw-passagedata pid="65" name="PlotHookPaper" tags="" position="600,850">You see a noticeboard next to the $tavern.wordnoun&#39;s $tavern.material bar. Walking over to it, you see a number of barter requests nailed to the noticeboard; simple things like &#39;have chook, want grain&#39;, &#39;have grain, want chook&#39;. One catches your eye, though; it reads &#39;&lt;&lt;print $plothook.paper.random()&gt;&gt;&#39;</tw-passagedata><tw-passagedata pid="66" name="PlotHookPeople" tags="" position="725,850">&lt;&lt;set $plotguy to setup.createNPC()&gt;&gt;You wander around the $tavern.wordnoun, and eventually find yourself in conversation with a $plotguy.height, $plotguy.weight $plotguy.gender who introduces $plotguy.himher&lt;&lt;nobr&gt;&gt;self&lt;&lt;/nobr&gt;&gt; as $plotguy.firstName $plotguy.lastName&lt;&lt;nobr&gt;&gt;.&lt;&lt;/nobr&gt;&gt; You can&#39;t help but notice $plotguy.firstName has a &lt;&lt;print $plotguy.physicalTrait&gt;&gt;. You explain that you are adventurers, looking for work or otherwise profitable endeavours, and $plotguy.hisher $plotguy.eyes eyes light up, and $plotguy.firstName draws you closer, and whispers in a hushed tone &#39;I may have something of interest for you, in that case; &lt;&lt;print $plothook.people.random()&gt;&gt;&#39;</tw-passagedata><tw-passagedata pid="67" name="PlotHookRumour" tags="" position="850,850">&lt;&lt;nobr&gt;&gt;&lt;&lt;set _PlotHookRumourRoll to random(1, 2)&gt;&gt;&lt;&lt;set $tavernPatron to setup.createNPC()&gt;&gt;
 &lt;&lt;if _PlotHookRumourRoll is 1&gt;&gt;
-You make your way around the $tavern.wordnoun, and chat with a couple of the locals. They are friendly enough for simple $town.type folk, and are happy to share a drink with you, and gossip easily- apparently, $bartender.name $bartender.trait&lt;&lt;nobr&gt;&gt;.&lt;&lt;/nobr&gt;&gt; When you steer the conversation towards rumours that they&#39;ve heard, the half-drunk $tavernPatron.racenote looks around, and in a hushed voice, whispers
+You make your way around the $tavern.wordnoun, and chat with a couple of the locals. They are friendly enough for simple $town.type folk, and are happy to share a drink with you, and gossip easily- apparently, $bartender.name $bartender.trait&lt;&lt;nobr&gt;&gt;.&lt;&lt;/nobr&gt;&gt; When you steer the conversation towards rumours that they&#39;ve heard, the half-drunk $tavernPatron.raceNote looks around, and in a hushed voice, whispers
 	&lt;&lt;elseif _PlotHookRumourRoll is 2&gt;&gt;
-You talk amongst the good folk of $town.name, who seem pleasant enough. They gossip easily, and reckon that $tavern.name is only known for its $tavern.draw, and that the pub across the road is totally way better. You steer the conversation towards topics that are more interesting to adventurers such as yourselves, and the drunk $tavernPatron.racenote looks around, and whispers in a hushed voice
+You talk amongst the good folk of $town.name, who seem pleasant enough. They gossip easily, and reckon that $tavern.name is only known for its $tavern.draw, and that the pub across the road is totally way better. You steer the conversation towards topics that are more interesting to adventurers such as yourselves, and the drunk $tavernPatron.raceNote looks around, and whispers in a hushed voice
 &lt;&lt;/if&gt;&gt;&quot;&lt;&lt;print $plothook.rumour.pluck()&gt;&gt;&quot;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="PlotHookThings" tags="" position="975,850">To be added.</tw-passagedata><tw-passagedata pid="69" name="Popup" tags="" position="1100,850">&lt;&lt;nobr&gt;&gt;&lt;&lt;set _roll to random(1, 99)&gt;&gt;
 &lt;&lt;if $patronContent is true&gt;&gt;
       &lt;div type=&#39;descriptive&#39;&gt;The bartender in this instance is a Patron&#39;s character!&lt;/div&gt;
@@ -16875,7 +16875,7 @@ When you&#39;re ready, here&#39;s the &lt;&lt;nobr&gt;&gt;&lt;&lt;set _output to
 	{
 	name: &quot;Thimble Rig&quot;,
 	type: &quot;guessing game&quot;,
-	description: &quot;A &lt;&lt;print either($NPCgamebanker.descriptor)&gt;&gt;&#39;s quick hands, a pair of $NPCgamer.eyes eyes belonging to a $NPCgamer.racenote watching carefully, a deal board, three thimbles, and a pepper-corn sit in the corner, along with a crowd of people watching the two. The game they play around the table with these curious articles is a sort of Lilliputian game at cups and balls; and the beauty of it lies in seeming to place the pepper-corn under one particular thimble, getting the $NPCgamer.racenote who is playing to bet that it was there, and then winning $NPCgamer.hisher money by showing that it is not.&quot;,
+	description: &quot;A &lt;&lt;print either($NPCgamebanker.descriptor)&gt;&gt;&#39;s quick hands, a pair of $NPCgamer.eyes eyes belonging to a $NPCgamer.raceNote watching carefully, a deal board, three thimbles, and a pepper-corn sit in the corner, along with a crowd of people watching the two. The game they play around the table with these curious articles is a sort of Lilliputian game at cups and balls; and the beauty of it lies in seeming to place the pepper-corn under one particular thimble, getting the $NPCgamer.raceNote who is playing to bet that it was there, and then winning $NPCgamer.hisher money by showing that it is not.&quot;,
 	rules: &quot;The object of the game is to guess which thimble the peppercorn is under; sort of like a miniature cup and balls.&quot;,
 	bet: random(4, 9)
 	},
@@ -16895,7 +16895,7 @@ When you&#39;re ready, here&#39;s the &lt;&lt;nobr&gt;&gt;&lt;&lt;set _output to
 	rules: &quot;Two coins are flipped by the &#39;spinner&#39;, who bets against another. Both heads wins, both tails loses, and one of each calls for another cointoss, with the &#39;spinner&#39; losing out on five consecutive re-tosses.&quot;,
 	bet: 10
 	}
-	])&gt;&gt;&lt;&lt;/nobr&gt;&gt;&lt;div class=&quot;descriptive&quot;&gt;&lt;h3&gt;$taverngames.name&lt;/h3&gt;$taverngames.description &lt;&lt;linkreplace &quot;Ask how to play&quot;&gt;&gt; The $NPCgamer.racenote that was playing says &quot;$taverngames.rules The current bet is &lt;&lt;money $taverngames.bet&gt;&gt;.&quot;&lt;&lt;/linkreplace&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="105" name="TavernGuard" tags="" position="600,1350">&lt;&lt;set _guard to random(1, 100)&gt;&gt;
+	])&gt;&gt;&lt;&lt;/nobr&gt;&gt;&lt;div class=&quot;descriptive&quot;&gt;&lt;h3&gt;$taverngames.name&lt;/h3&gt;$taverngames.description &lt;&lt;linkreplace &quot;Ask how to play&quot;&gt;&gt; The $NPCgamer.raceNote that was playing says &quot;$taverngames.rules The current bet is &lt;&lt;money $taverngames.bet&gt;&gt;.&quot;&lt;&lt;/linkreplace&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="105" name="TavernGuard" tags="" position="600,1350">&lt;&lt;set _guard to random(1, 100)&gt;&gt;
 &lt;&lt;set _brawl to random(1, 100)&gt;&gt;
 
 /*&lt;&lt;if $guard.population gt 20&gt;&gt;
@@ -17555,7 +17555,7 @@ When you&#39;re ready, here&#39;s the &lt;&lt;nobr&gt;&gt;&lt;&lt;set _output to
 	&lt;&lt;default&gt;&gt;
 			&lt;&lt;set $guard.name to &quot;The &quot; + _guardnameC + &quot; &quot; + _guardnameD + &quot; of &quot; + _guardnameB&gt;&gt;
 &lt;&lt;/switch&gt;&gt;</tw-passagedata><tw-passagedata pid="115" name="GuardOutput" tags="" position="600,1475">&lt;h1&gt;$guard.name&lt;/h1&gt;
-$guard.name is led by &lt;&lt;profile $guardCaptain&gt;&gt;, a $guardCaptain.racenote. $guard.name is a $guard.size of $guard.population. One can recognise a member of $guard.name by the $guard.primaryColours and $guard.secondaryColours livery adorned with an image of $guard.insignia.
+$guard.name is led by &lt;&lt;profile $guardCaptain&gt;&gt;, a $guardCaptain.raceNote. $guard.name is a $guard.size of $guard.population. One can recognise a member of $guard.name by the $guard.primaryColours and $guard.secondaryColours livery adorned with an image of $guard.insignia.
 
 $guard.funding
 
@@ -18541,7 +18541,7 @@ $town.sizeRoll to $town.sizeRoll.clamp(1, 100)&gt;&gt;
     &lt;&lt;replace &quot;#random&quot;&gt;&gt;
             $town.landmark
     &lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;
-is &lt;span id=&quot;random&quot;&gt;$town.landmark&lt;/span&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="124" name="TownMicroEvents" tags="" position="475,1600">&lt;&lt;set $town.microevents to [&quot;a gnarled old man offers to sell you a &#39;lucky&#39; trinket for a gold coin&quot;,
+is &lt;span id=&quot;random&quot;&gt;$town.landmark&lt;/span&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="124" name="TownMicroEvents" tags="" position="475,1600">&lt;&lt;set $town.microEvents to [&quot;a gnarled old man offers to sell you a &#39;lucky&#39; trinket for a gold coin&quot;,
  &quot;a young boy wants to see a demonstration of your weapon&quot;,
  &quot;a little girl is crying because she broke her favorite toy&quot;,
  &quot;a little gem falls out of the pocket of the man walking ahead of you&quot;,
@@ -18646,7 +18646,7 @@ is &lt;span id=&quot;random&quot;&gt;$town.landmark&lt;/span&gt;&lt;&lt;/nobr&gt
     &lt;&lt;notify 5000&gt;&gt;Want to get straight to the action, sans slider screen? They&#39;re currently set to settings.showSliders. You can change them in the settings.&lt;&lt;/notify&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if random(1, 99) gt 50&gt;&gt;
-  &lt;blockquote&gt;As you make your way along $currentPassage.road, &lt;&lt;print $town.microevents.random()&gt;&gt;&lt;/blockquote&gt;
+  &lt;blockquote&gt;As you make your way along $currentPassage.road, &lt;&lt;print $town.microEvents.random()&gt;&gt;&lt;/blockquote&gt;
 &lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="126" name="TownOrigin" tags="" position="725,1600">&lt;&lt;switch $town.terrain&gt;&gt;
 &lt;&lt;case &quot;temperate&quot;&gt;&gt;
   &lt;&lt;switch $town.location&gt;&gt;

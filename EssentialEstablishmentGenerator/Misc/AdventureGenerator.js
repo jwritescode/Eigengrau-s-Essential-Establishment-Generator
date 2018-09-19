@@ -59,7 +59,7 @@
 //           State.variables.adventureGoalNPC = goalNPC;
 //           Object.assign(adventure, {
 //               goalNPC: goalNPC,
-//               goal: "rescue " + adventureGoalNPC.name + ", a " + adventureGoalNPC.racenote + " who was captured and taken prisoner.",
+//               goal: "rescue " + adventureGoalNPC.name + ", a " + adventureGoalNPC.raceNote + " who was captured and taken prisoner.",
 //           });
 //           break;
 //   case "discover the fate of a previous adventuring party.":
@@ -67,7 +67,7 @@
 //           State.variables.adventureGoalNPC = goalNPC;
 //           Object.assign(adventure, {
 //               goalNPC: goalNPC,
-//               goal: "rescue " + adventureGoalNPC.name + ", a " + adventureGoalNPC.racenote + " who was captured and taken prisoner.",
+//               goal: "rescue " + adventureGoalNPC.name + ", a " + adventureGoalNPC.raceNote + " who was captured and taken prisoner.",
 //           });
 //           break;
 //   case "find an npc who disappeared in the area.":
@@ -75,7 +75,7 @@
 //           State.variables.adventureGoalNPC = goalNPC;
 //           Object.assign(adventure, {
 //               goalNPC: goalNPC,
-//               goal: "find " + adventureGoalNPC.name + ", a " + adventureGoalNPC.racenote + " who disappeared in the area.",
+//               goal: "find " + adventureGoalNPC.name + ", a " + adventureGoalNPC.raceNote + " who disappeared in the area.",
 //           });
 //           break;
 //   case "escort an npc to a destination.":
@@ -83,7 +83,7 @@
 //           State.variables.adventureGoalNPC = goalNPC;
 //           Object.assign(adventure, {
 //               goalNPC: goalNPC,
-//               goal: "escort " + adventureGoalNPC.name + ", a " + adventureGoalNPC.racenote + " who needs protection on the way to another place.",
+//               goal: "escort " + adventureGoalNPC.name + ", a " + adventureGoalNPC.raceNote + " who needs protection on the way to another place.",
 //           });
 //           break;
 //   case "discover the fate of a missing group of explorers.":
@@ -99,7 +99,7 @@
 //           State.variables.adventureGoalNPC = goalNPC;
 //           Object.assign(adventure, {
 //               goalNPC: goalNPC,
-//               goal: "rescue " + adventureGoalNPC.name + ", a " + adventureGoalNPC.racenote + " who was captured and taken prisoner.",
+//               goal: "rescue " + adventureGoalNPC.name + ", a " + adventureGoalNPC.raceNote + " who was captured and taken prisoner.",
 //           });
 //           break;
 //   case "rescue a character, monster, or object from a natural or unnatural disaster.":
@@ -107,7 +107,7 @@
 //           State.variables.adventureGoalNPC = goalNPC;
 //           Object.assign(adventure, {
 //               goalNPC: goalNPC,
-//               goal: "rescue " + adventureGoalNPC.name + ", a " + adventureGoalNPC.racenote + " who was caught in a natural disaster.",
+//               goal: "rescue " + adventureGoalNPC.name + ", a " + adventureGoalNPC.raceNote + " who was caught in a natural disaster.",
 //           });
 //
 //
@@ -147,7 +147,7 @@
 //           State.variables.adventureVillain = villain;
 //           Object.assign(adventure, {
 //                 adventureVillain: adventureVillain,
-//                 villain: adventureVillain.racenote + " called " + adventureVillain.name + " hellbent on revenge.",
+//                 villain: adventureVillain.raceNote + " called " + adventureVillain.name + " hellbent on revenge.",
 //           });
 //           break;
 //   case "humanoid schemer seeking to rule":
@@ -155,7 +155,7 @@
 //           State.variables.adventureVillain = villain;
 //           Object.assign(adventure, {
 //                 adventureVillain: adventureVillain,
-//                 villain: "conniving" + adventureVillain.racenote + "called " + adventureVillain.name + " who seeks power",
+//                 villain: "conniving" + adventureVillain.raceNote + "called " + adventureVillain.name + " who seeks power",
 //           });
 //           break;
 //   case "humanoid criminal mastermind":
@@ -163,7 +163,7 @@
 //           State.variables.adventureVillain = villain;
 //           Object.assign(adventure, {
 //                 adventureVillain: adventureVillain,
-//                 villain: "conniving" + adventureVillain.racenote + "called " + adventureVillain.name + " who seeks to build a criminal empire",
+//                 villain: "conniving" + adventureVillain.raceNote + "called " + adventureVillain.name + " who seeks to build a criminal empire",
 //           });
 //           break;
 //   case "humanoid raider or ravager":
@@ -179,7 +179,7 @@
 //           State.variables.adventureVillain = villain;
 //           Object.assign(adventure, {
 //                 adventureVillain: adventureVillain,
-//                 villain: adventureVillain.racenote + " called " + adventureVillain.name + " who was placed under a curse"
+//                 villain: adventureVillain.raceNote + " called " + adventureVillain.name + " who was placed under a curse"
 //           });
 //           break;
 //   case "misguided humanoid zealot":
@@ -187,7 +187,7 @@
 //           State.variables.adventureVillain = villain;
 //           Object.assign(adventure, {
 //                 adventureVillain: adventureVillain,
-//                 villain: "misguided" + adventureVillain.racenote + "zealot called " + adventureVillain.name,
+//                 villain: "misguided" + adventureVillain.raceNote + "zealot called " + adventureVillain.name,
 //           });
 //           break;
 //   default:

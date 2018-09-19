@@ -4,7 +4,7 @@ setup.createNPC = function (base) {
 
   var beard
   var beardRoll = random(1, 99)
-  var currentproject
+  var currentProject
   var vocalPattern
   var descriptor = []
   var availableLanguages
@@ -57,7 +57,8 @@ setup.createNPC = function (base) {
     raceName: setup.npcData.raceTraits[race].raceName,
     raceAdjective: setup.npcData.raceTraits[race].raceAdjective,
     raceLanguage: setup.npcData.raceTraits[race].raceLanguage,
-    currentproject: currentproject,
+    muscleMass: setup.npcData.raceTraits[race].muscleMass,
+    currentProject: currentProject,
     mundane: mundane,
     hasClass: hasClass,
     isVillain: isVillain,
