@@ -1,8 +1,9 @@
 
 :: Smithy
 
-<<set $smithy to setup.createBuilding()>>
-<<set $smithy.passageName to "SmithyOutput">>
+<<set $smithy to setup.createSmithy()>>
+<<set $blacksmith to $smithy.blacksmith>>
+/* <<set $smithy.passageName to "SmithyOutput">>
 <<set $smithy.weapons to ["dagger", "long sword", "short sword", "morning star", "mace", "axe", "greataxe", "spear", "falcheon", "bastard sword", "warhammer", "iron crossbow", "claymore", "flail", "broad sword", "pike", "scimitar", "dart", "rapier", "trident", "halberd", "glaive", "lance", "war pick"]>>
 <<set $smithy.mundane to ["plows", "rabbit traps", "horseshoes", "shovels", "lamps", "fire pokers", "axes", "hammers", "pliers", "steel couplings", "trays", "wheelbarrows", "nails", "pickaxes", "hatchets", "locks and keys", "lockpicks"]>>
 <<set $smithy.sinRoll to $smithy.sinRoll.clamp(1, 100),
@@ -13,4 +14,4 @@
 		$smithy.roughnessRoll to $smithy.roughnessRoll.clamp(1, 100),
 		$smithy.diversityRoll to $smithy.diversityRoll.clamp(1, 100),
 		$smithy.sizeRoll to $smithy.sizeRoll.clamp(1, 100),
-		$smithy.magicRoll to $smithy.magicRoll.clamp(1, 100)>>
+		$smithy.magicRoll to $smithy.magicRoll.clamp(1, 100)>> */

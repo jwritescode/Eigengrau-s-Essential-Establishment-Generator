@@ -15,11 +15,13 @@
 
 <<include "Cheese">>
 
+/* <<include "Bartender">> */
+
 <<include "Tavern">>
 
 /*<<include "TavernNameGen">>*/
 
-<<include "TavernFlavour">>
+/* <<include "TavernFlavour">> */
 
 <<include "TavernInventory">>
 
@@ -27,7 +29,7 @@
 
 <<include "PatreonCharacters">>
 
-<<include "Bartender">>
+
 
 <<include "PlotHook">>
 
@@ -39,15 +41,15 @@
 
 <<include "Alchemist">>
 
-<<include "AlchemistModifiers">>
+/* <<include "AlchemistModifiers">> */
 
-<<include "AlchemistNameGen">>
+/* <<include "AlchemistNameGen">> */
 
 <<include "Potions">>
 
 <<include "AlchemistInventory">>
 
-<<include "Blacksmith">>
+/* <<include "Blacksmith">> */
 
 <<include "Smithy">>
 
@@ -57,7 +59,7 @@
 
 <<include "SmithyRenders">>
 
-<<include "SmithyNameGen">>
+/* <<include "SmithyNameGen">> */
 
 <<include "GeneralStore">>
 

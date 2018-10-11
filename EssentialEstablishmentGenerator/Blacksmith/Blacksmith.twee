@@ -1,6 +1,6 @@
 
 :: Blacksmith
-
+/*
 <<set $blacksmith to setup.createNPC({
 	dndClass: "blacksmith",
 	profession: "blacksmith",
@@ -19,4 +19,4 @@
 									"a <<print either($smithy.weapons)>> for the captain of the guard, $guardcaptain.name.",
 									"I was commissioned by the town guard to make new <<print either($smithy.weapons)>>s for all the guardsmen. It'll probably take a damn long time.",
 									"I'm really just working on fleshing out the stock of the shop at the moment. Mostly general items like nails, horeshoes, and what not"])
-									})>>
+									})>> */

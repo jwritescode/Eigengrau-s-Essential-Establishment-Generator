@@ -1,4 +1,4 @@
-setup.createBuilding = function (type, base) {
+setup.createBuilding = function (type) {
   // Tables used later
   var index = State.variables.buildings.size
   var isThrowaway
@@ -63,7 +63,7 @@ setup.createBuilding = function (type, base) {
     cleanlinessRoll: random(1, 100).clamp(1, 100),
     expertiseRoll: random(1, 100).clamp(1, 100),
     activityRoll: random(1, 100).clamp(1, 100)
-  }, base)
+  })
 
   building.sinRoll.clamp(1, 100)
   building.wealthRoll.clamp(1, 100)

@@ -1,7 +1,17 @@
 
 :: Tavern
+/* <<set $bartender to setup.createBartender($town)>> */
+<<set $bartender to setup.createNPC({
+	idle: ["polishing a glass with $bartender.hisher hands", "reading a newspaper which says <<print $newspaperheadline>>", "pouring a drink for a customer", "taking an order from a customer", "talking with a customer", "picking $bartender.hisher nose", "playing a card game by $bartender.himherself", "checking the stock levels of the beer on tap", "shouting into the kitchen, annoyed", "yelling instructions into the kitchen", "leaning against a stool, surveying the work of one of the barmaids", "pouring a beer from one of the taps", "zoned out staring at a wall", "lighting some candles on the bar", "handing a customer their food", "barking orders at one of the barmaids", "breaking up a fight in front of the bar"],
+	owner: either(["owner", "caretaker", "proud owner", "proprietor", "current owner", "manager", "manager", "acting manager"]),
+	greeting: ["nods at you", "welcomes you warmly", "smiles and greets you", "raises a hand with a wave", "sizes you up, before $bartender.heshe nods at you", "checks you out for just a moment before smiling at you"],
+	dndClass: either("bartender", "bartender", "bartender", "bartender", "bartender", "bartender", "bartender", "bartender", "bartender", "bartender", "bartender", "bartender", "bartender", "barbarian", "bard", "cleric", "druid", "fighter", "monk", "rogue", "ranger", "paladin", "sorcerer", "warlock", "wizard"),
+	profession: "bartender"
+	})>>
 <<set $tavern to setup.createBuilding()>>
-<<set $tavern.wordnoun to either("tavern", "tavern", "tavern", "tavern", "pub", "pub", "pub", "inn", "inn", "bar", "bar", "bar", "watering hole", "drinkery"),
+<<set $tavern to setup.createTavern($town, $tavern, $bartender)>>
+/* <<set $bartender to $tavern.bartender>> */
+/* <<set $tavern.wordnoun to either("tavern", "tavern", "tavern", "tavern", "pub", "pub", "pub", "inn", "inn", "bar", "bar", "bar", "watering hole", "drinkery"),
 	$tavern.type to either([
 		"quiet and low-key bar",
 		"regular",
@@ -51,7 +61,7 @@
 	$tavern.shortages to ["wine", "booze", "grog", "whiskey", "mutton", "lamb", "carrots", "mugs", "forks", "frogs", "bread", "mushrooms", "salt", "silver pieces", "chairs", "eggs", "potatoes"]
 >>
 <<set $tavern.passageName to "TavernOutput">>
-/* Exclusion code for brothels + churches */
+
 <<if ($tavern.type is "gambling den" && $tavern.draw is "proximity to the church")>>
 			<<set $tavern.draw to "proximity to the brothel">>
 	<<elseif ($tavern.type is "brothel" && $tavern.draw is "proximity to the church")>>
@@ -77,4 +87,4 @@
 
 <<if $tavern.draw is "proximity to the brothel" && ndef $brothel>>
 		<<include "Brothel">>
-<</if>>
+<</if>> */
